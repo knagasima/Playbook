@@ -1,0 +1,12 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: pwd
+      shell: pwd
+      register: result1
+    - debug: var=result1
+    - name: hostname
+      shell: hostname
+      register: result2
+    - debug: var=result2
