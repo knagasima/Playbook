@@ -1,5 +1,9 @@
 ---
 - hosts: all
+  vars:
+    var1: "{{var1}}"
+    var2: "{{var2}}"
+    var3: "{{var3}}"
   tasks:
     - name: hostname
       shell: hostname
@@ -7,7 +11,7 @@
     - debug: var=result2
 
     - name: This command will change the working directory to /work_naga
-      shell: /work_naga/test.sh
+      shell: /work_naga/test.sh  {{var1}} {{var2} {{var3}}
       args:
         chdir: /work_naga/
     - name: pwd
