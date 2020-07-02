@@ -6,8 +6,8 @@
       register: result2
     - debug: var=result2
 
-    - name: This command will change the working directory to somedir/ and will only run when somedir/somelog.txt doesn't exist.
-      shell: test.sh
+    - name: This command will change the working directory to /work_naga
+      shell: /work_naga/test.sh
       args:
         chdir: /work_naga/
     - name: pwd
