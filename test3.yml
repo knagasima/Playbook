@@ -9,7 +9,7 @@
     - name: This command will change the working directory to somedir/ and will only run when somedir/somelog.txt doesn't exist.
       shell: test.sh
       args:
-        chdir: work_naga/
+        chdir: /work_naga/
     - name: pwd
       shell: pwd
       register: result1
