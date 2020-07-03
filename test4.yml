@@ -12,7 +12,7 @@
     - name: shell
       shell: "/work_naga/test.sh {{ var1 }}"
       register: result2
-    - debug: var=result1
+    - debug: var=result2
 
     - name: cat
       command: cat /work_naga/test.log
