@@ -5,7 +5,8 @@
       shell: hostname
       register: result2
     - debug: var=result2
-    - debug: var="{{ var1 }}"
+    - debug:
+        msg: "{{ var1 }}"
     - name: shell
       shell: /work_naga/test.sh {{ var1 }}
     - name: cat
