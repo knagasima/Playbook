@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: hostname
+      shell: hostname
+      register: result2
+    - debug: var=result2
+    - debug: var="{{ var1 }}"
+    - name: shell
+      shell: /work_naga/test.sh {{ var1 }}
+    - name: cat
+      command: cat /work_naga/test.log
+      register: result1
+    - debug: var=result1
