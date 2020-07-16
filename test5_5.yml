@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+    - name: hostname
+      command: hostname
+      register: result1
+    - debug: var=result1
+
+    - debug:
+        msg: "{{ var1 }}"
+
+    - name: shell
+      command: "/root/work/test5_5.sh {{ var1 }}"
+      register: result2
+    - debug: var=result2
+
+    - name: cat
+      command: cat /root/work/test5_5.log
+      register: result3
+    - debug: var=result3
