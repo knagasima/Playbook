@@ -4,8 +4,8 @@
   tasks:
     - name: pwd
       command: pwd
-      register: result1
-    - debug: var=result1
+      register: result
+    - debug: var=result
     - name: hostname
       command: hostname
       register: result2
