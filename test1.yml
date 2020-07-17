@@ -3,10 +3,10 @@
   connection: local
   tasks:
     - name: pwd
-      shell: pwd
+      command: pwd
       register: result1
     - debug: var=result1
     - name: hostname
-      shell: hostname
+      command: hostname
       register: result2
     - debug: var=result2
